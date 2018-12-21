@@ -1,10 +1,13 @@
-#include <stdio.h>
+#include <stdio.h>/*system library*/
+#include "displayShell.h"
 
+/*main function*/
 int main(int argc, int *argv[]){
-	int n;
-
-	init();
 	
+	/*display the init bar*/
+	init();	
+	
+	/*display the init bar*/
 	end();
 
 	return 0;
