@@ -2,12 +2,13 @@
 #define _STRUCT_H_
 
 /*I will create a structure to set up my board*/
-typedef struct board{
+struct board{
 	int n;
 	int p;
-	int **t;
-}b*;
-	
-void allocate_board();
+	char **t;
+}*b;
+
+/*create the game board*/
+void create_board(void);
 
 #endif

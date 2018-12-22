@@ -2,7 +2,7 @@
 
 -----------------------------------------------PRESENTATION-----------------------------------------------------
 
-This project is about creating a simple morpion game in C language.
+This project is about creating a simple morpion game in C language using SDL library.
 
 
 -----------------------------------------------COMPILE & RUN----------------------------------------------------
