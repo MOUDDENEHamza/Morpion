@@ -11,14 +11,14 @@ void create_board(){
 	b = malloc(sizeof(struct board));
 	b->n = 3;
 	b->p = 3;
-	b->t = (char **) malloc(b->n * sizeof(char *));
+	b->t = (int **) malloc(b->n * sizeof(int *));
 	for (i = 0; i < b->n; i++){
-		b->t[i] = (char *) malloc(b->p * sizeof(char));
+		b->t[i] = (int *) malloc(b->p * sizeof(int));
 	}
 	
 	for (i = 0; i < b->n; i++){
 		for (j = 0; j < b->p; j++){
-			b->t[i][j] = '.';
+			b->t[i][j] = 0;
         	}
 	}
 

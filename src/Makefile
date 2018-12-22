@@ -1,6 +1,6 @@
 GCC = gcc
 INCLUDE = -I ../include
-SRC = displayShell.c struct.c main.c
+SRC = displayShell.c struct.c gameRule.c input.c main.c
 OBJ= $(SRC:.c=.o)
 LIB = ../lib
 EXEC = ./../bin/main

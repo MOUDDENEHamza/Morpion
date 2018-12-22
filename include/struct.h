@@ -5,7 +5,7 @@
 struct board{
 	int n;
 	int p;
-	char **t;
+	int **t;
 }*b;
 
 /*create the game board*/

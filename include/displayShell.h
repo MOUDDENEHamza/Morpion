@@ -4,12 +4,18 @@
 #include "struct.h"
 
 /*display the init bar*/
-void init();
+void display_init(void);
 
 /*display the game board*/
-void display_board(int n, int p, char **board);
+void display_board(int *n, int *p, int **t);
+
+/*display the player turn*/
+void display_turn(int *turn, int *flag);
+
+/*display the winner*/
+void display_winner(int *turn);
 
 /*display the init bar*/
-void end ();
+void display_end(void);
 
 #endif
