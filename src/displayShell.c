@@ -14,7 +14,7 @@ void display_init(void){
 	
 	printf(CYAN"\n****************************************************************************************\n"RESET);
 	printf("\n\t\t\t\t     "GREEN"MORPION"RESET"\n");
-printf(CYAN"\n****************************************************************************************\n"RESET);
+printf(CYAN"\n****************************************************************************************\n"RESET"\ninit...\n");
 
 	return;
 }
@@ -41,7 +41,7 @@ void display_board(int *n, int *p, int **t){
 		}
 		printf("\n\t\t-------------------------------------------------\n");
 	}
-	printf(CYAN"\n---------------------------------------------------------------------------------------------\n"RESET);
+	printf(CYAN"\n----------------------------------------------------------------------------------------\n"RESET);
 
 	return;
 }
@@ -49,14 +49,14 @@ void display_board(int *n, int *p, int **t){
 /*display the player turn*/
 void display_turn(int *turn, int *flag){
 	if (*turn % 2 == 0){//display the player1's turn
-		printf("\n"MAGENTA"turn  :"RESET" player %d.\n", (*turn % 2) + 1);
-		*flag = 1;
+		printf("\n"MAGENTA"turn  :"RESET" player %d.\n", (*turn % 2) + 2);
+		*flag = 2;
 	
 	}
 
 	else {//display the player2's turn
-		printf("\n"MAGENTA"turn  :"RESET" player %d.\n", (*turn % 2) + 1);
-		*flag = 2;
+		printf("\n"MAGENTA"turn  :"RESET" player %d.\n", *turn % 2);
+		*flag = 1;
 	}
 	
 	return;
@@ -64,7 +64,12 @@ void display_turn(int *turn, int *flag){
 
 /*display the winner*/
 void display_winner(int *turn){
-	printf("\nthe player %d win.\n", (*turn % 2));
+	if (*turn % 2 == 0){
+		printf("\nthe player 2 win.\n");
+	}
+	else{
+		printf("\nthe player 1 win.\n");
+        }
 	return;
 }
 

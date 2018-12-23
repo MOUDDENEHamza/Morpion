@@ -7,37 +7,32 @@
 /*main function*/
 int main(int argc, int *argv[]){
 	/*initialize variable*/
-	int turn = 0;
+	int turn = 1;
 	int flag;
 	int n;
 	int p;
 
-	/*display the init bar*/
-	display_init();	
-	
-	/*create the game board*/
-	create_board();
-
-	/*display the game board*/
-	display_board(&b->n, &b->p, b->t);
-
+	display_init();//display the init bar.
+	create_board();///create the game board.
+	display_board(&b->n, &b->p, b->t);//display the game board.
 	while(1){
-		if (win(&b->n, &b->p, b->t, &flag) == 0){
+		display_turn(&turn, &flag);//display the player turn
+		put_flag(&n, &p);//put the flag in the choosen box
+		if (available_move(&n, &p, b->t) == 1){//check if the choosen move is available.
+			continue;
+		}
+		update_board(&n, &p, b->t, &flag);//update the board game.
+	        display_board(&b->n, &b->p, b->t);//display the game board.
+		if (win(&b->n, &b->p, b->t, &flag) == 0){//check if the current player won.
                         display_winner(&turn);//display the winner
                         break;
                 }
-		display_turn(&turn, &flag);//display the player turn
-		put_flag(&n, &p);//put the flag in the choosen box
-		if (available_move(&n, &p, b->t) == 1){
-			continue;
-		}
-		update_board(&n, &p, b->t, &flag);
-	        display_board(&b->n, &b->p, b->t);//display the game board
+		if (win(&b->n, &b->p, b->t, &flag) == -1){//check if there is no winner.
+                        break;
+                }
 		turn += 1;
 	}
-
-	/*display the init bar*/
-	display_end();
+	display_end();//display the init bar.
 
 	return 0;
 }
