@@ -15,12 +15,18 @@ void create_board(){
 	for (i = 0; i < b->n; i++){
 		b->t[i] = (int *) malloc(b->p * sizeof(int));
 	}
-	
+
 	for (i = 0; i < b->n; i++){
 		for (j = 0; j < b->p; j++){
 			b->t[i][j] = 0;
-        	}
+		}
 	}
 
+	return;
+}
+
+/*handle the box structure*/
+void handle_player(void){
+	p = malloc(sizeof(struct player));
 	return;
 }

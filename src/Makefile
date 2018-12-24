@@ -12,7 +12,6 @@ compile : $(SRC)
 	$(GCC) -o $(EXEC) $(OBJ)
 	mv $(OBJ) $(LIB)
 
-
 run : $(EXEC)
 	$(EXEC)
 

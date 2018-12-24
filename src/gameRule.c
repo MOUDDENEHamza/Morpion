@@ -41,30 +41,30 @@ int win(int *n, int *p, int **t, int *flag){
 	}
 
 	for (i = 0; i < *n; i++){//check if there is the same flag in the same column.
-                for (j = 0; j < *p; j++){
-                        if (t[j][i] == *flag){
-                                cpt += 1;
-                        }
-                }
-                if (cpt == 3){
+		for (j = 0; j < *p; j++){
+			if (t[j][i] == *flag){
+				cpt += 1;
+			}
+		}
+		if (cpt == 3){
 			printf("\nthere is the same flag in the column %d.\n", i + 1);
-                        return 0;
-                }
-                cpt = 0;
-        }
+			return 0;
+		}
+		cpt = 0;
+	}
 
 	for (i = 0; i < *n; i++){//check if there is the same flag in the diagonal ascending.
 		if (t[i][i] == *flag){
-                        cpt += 1;
-                }
-	 	if (cpt == 3){
+			cpt += 1;
+		}
+		if (cpt == 3){
 			printf("\nthere is the same flag in the ascending diagonal.\n");
-                        return 0;
-                }
-        }
-	
+			return 0;
+		}
+	}
+
 	cpt = 0;
-        for (i = 0; i < *n; i++){//check if there is the same flag in the diagonal downward.
+	for (i = 0; i < *n; i++){//check if there is the same flag in the diagonal downward.
 		if (t[i][(*n - 1) - i] == *flag){
 			cpt += 1;
 		}
@@ -75,16 +75,16 @@ int win(int *n, int *p, int **t, int *flag){
 	}
 
 	for (i = 0; i < *n; i++){//check if there are not an empty box.
-                for (j = 0; j < *p; j++){
-                        if (t[i][j] != 0){
+		for (j = 0; j < *p; j++){
+			if (t[i][j] != 0){
 				cpt += 1;
-                        }
+			}
 			if (cpt == *n * *p){
 				printf("\nDraw.\n");
 				return -1;
 			}
-                }
-        }
+		}
+	}
 
 	return 1;
 }

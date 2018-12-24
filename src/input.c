@@ -20,13 +20,13 @@ void input_x(int *x, int *n){
 
 /*input the column where you want to put your flag*/
 void input_y(int *y, int *p){
-        while(1){
-                printf("\nenter the column : ");
-                scanf("%d", y);
-                if (*y < 0 || *y >= *p){
-                        printf("\n"RED"ERROR :"RESET" out of range, please try again.\n");
-                        continue;
-                }
-                return;
-        }
+	while(1){
+		printf("\nenter the column : ");
+		scanf("%d", y);
+		if (*y < 0 || *y >= *p){
+			printf("\n"RED"ERROR :"RESET" out of range, please try again.\n");
+			continue;
+		}
+		return;
+	}
 }
