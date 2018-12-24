@@ -5,7 +5,6 @@ OBJ= $(SRC:.c=.o)
 LIB = ../lib
 EXEC = ./../bin/main
 
-
 all : compile run
 
 compile : $(SRC)

@@ -3,7 +3,10 @@
 
 #include "struct.h"
 
-/*put the flag in the choosen box*/
-void put_flag(int *n, int *p);
+/*input the line where you want to put your flag*/
+void input_x(int *x, int *n);
+
+/*input the column where you want to put your flag*/
+void input_y(int *y, int *p);
 
 #endif
