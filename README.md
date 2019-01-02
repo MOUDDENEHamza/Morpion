@@ -1,4 +1,5 @@
 #PRESENTATION
+-----------------------------------------------------------------------------------------------------------
 
 This project is about creating a simple morpion game in C language.
 
