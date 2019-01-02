@@ -13,7 +13,7 @@ void input_x(int *x, int *n){
 		if (*x < 0 || *x >= *n){
 			printf("\n"RED"ERROR :"RESET" out of range, please try again.\n");
 			continue;
-		} 
+		}
 		return;
 	}
 }
