@@ -7,6 +7,11 @@ EXEC = ./../bin/main
 
 all : compile run
 
+sdl : sdl.c
+	gcc sdl.c `sdl-config --cflags --libs` -lSDL2_ttf -lSDL_image -o sdl
+	./sdl
+	
+
 compile : $(SRC)
 	$(GCC) $(INCLUDE) -c $(SRC)
 	$(GCC) -o $(EXEC) $(OBJ)
