@@ -1,10 +1,8 @@
 #PRESENTATION
-----------------------------------------------------------------------------------------------------------------
 
 This project is about creating a simple morpion game in C language.
 
 #COMPILE & RUN
-----------------------------------------------------------------------------------------------------------------
 
 to compile and execute this program, you have to type on the terminal:
 
@@ -15,7 +13,6 @@ to clean the preject, you have to type:
 					make clean
 
 #LICENSE
-----------------------------------------------------------------------------------------------------------------
 
 -This program is “free software” if the program’s users have the four essential freedoms:
 
