@@ -15,5 +15,8 @@ compile : $(SRC)
 run : $(EXEC)
 	$(EXEC)
 
+git : 
+	git add . && git commit -m "release" && git push
+
 clean : 
 	rm $(EXEC) $(LIB)/*.o
