@@ -1,4 +1,8 @@
 GCC = gcc
+GIT = git
+ADD = add .
+COMMIT = commit -m "release"
+PUSH = push
 INCLUDE = -I include
 SRC = src/displayShell.c src/gameRule.c src/input.c src/struct.c src/main.c
 OBJ= $(SRC:.c=.o)
@@ -16,7 +20,7 @@ run : $(EXEC)
 	$(EXEC)
 
 git : 
-	git add . && git commit -m "release" && git push
+	$(GIT) $(ADD) && $(GIT) $(COMMIT) && $(GIT) $(PUSH)
 
 clean : 
 	rm $(EXEC) $(LIB)/*.o
